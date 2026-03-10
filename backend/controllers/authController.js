@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
-const db = require('../db');
+const { PrismaClient } = require('@prisma/client');
+const prisma = new PrismaClient();
 
 const JWT_SECRET = process.env.JWT_SECRET || 'gate2hotels_secret_2026';
 
@@ -8,17 +9,19 @@ const login = async (req, res) => {
     const { email, password } = req.body;
     if (!email || !password) return res.status(400).json({ message: 'Email and password required' });
 
-    const data = db.read();
-    let user = data.users?.find(u => u.email === email);
-    
-    // Auto-seed admin user if login with demo credentials
+    let user = await prisma.user.findUnique({ where: { email } });
+
+    // Auto-seed admin user if login with demo credentials and DB is empty
     if (!user && email === 'admin@gate2hotels.com' && password === 'admin123') {
-      user = { id: 'u_admin', name: 'Admin User', email: 'admin@gate2hotels.com', password: 'admin123', role: 'admin', hotelId: null };
-      if (!data.users) data.users = [];
-      data.users.push(user);
-      const fs = require('fs');
-      const path = require('path');
-      fs.writeFileSync(path.join(__dirname, '../data/db.json'), JSON.stringify(data, null, 2));
+      user = await prisma.user.create({
+        data: {
+          id: 'u_admin',
+          name: 'Admin User',
+          email: 'admin@gate2hotels.com',
+          password: 'admin123',
+          role: 'admin'
+        }
+      });
     }
 
     if (!user) return res.status(401).json({ message: 'Invalid credentials' });
@@ -39,15 +42,19 @@ const register = async (req, res) => {
     const { name, email, password, hotelId } = req.body;
     if (!name || !email || !password) return res.status(400).json({ message: 'All fields required' });
 
-    const data = db.read();
-    if (!data.users) data.users = [];
-    if (data.users.find(u => u.email === email)) return res.status(409).json({ message: 'Email already registered' });
+    const existing = await prisma.user.findUnique({ where: { email } });
+    if (existing) return res.status(409).json({ message: 'Email already registered' });
 
-    const newUser = { id: `u_${Date.now()}`, name, email, password, role: 'admin', hotelId: hotelId || null, createdAt: new Date().toISOString() };
-    data.users.push(newUser);
-    const fs = require('fs');
-    const path = require('path');
-    fs.writeFileSync(path.join(__dirname, '../data/db.json'), JSON.stringify(data, null, 2));
+    const newUser = await prisma.user.create({
+      data: {
+        id: `u_${Date.now()}`,
+        name,
+        email,
+        password,
+        role: 'admin',
+        hotelId: hotelId || null
+      }
+    });
 
     const token = jwt.sign({ id: newUser.id, email: newUser.email, role: newUser.role }, JWT_SECRET, { expiresIn: '7d' });
     const { password: _, ...safeUser } = newUser;
@@ -61,9 +68,10 @@ const getMe = async (req, res) => {
   try {
     const token = req.headers.authorization?.split(' ')[1];
     if (!token) return res.status(401).json({ message: 'No token' });
+
     const decoded = jwt.verify(token, JWT_SECRET);
-    const data = db.read();
-    const user = data.users?.find(u => u.id === decoded.id);
+    const user = await prisma.user.findUnique({ where: { id: decoded.id } });
+
     if (!user) return res.status(404).json({ message: 'User not found' });
     const { password: _, ...safeUser } = user;
     res.json(safeUser);

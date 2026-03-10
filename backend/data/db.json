@@ -1,0 +1,1276 @@
+{
+  "hotels": [
+    {
+      "id": "h1",
+      "name": "Erbil Grand Heritage",
+      "address": "Bakhtiari St",
+      "city": "Erbil",
+      "contact": "+964 750 000 1111",
+      "email": "info@erbilgrand.com",
+      "currency": "IQD",
+      "totalRooms": 45
+    },
+    {
+      "id": "h2",
+      "name": "Baghdad Palace Hotel",
+      "address": "Abu Nuwas St",
+      "city": "Baghdad",
+      "contact": "+964 780 000 2222",
+      "email": "stay@baghdadpalace.com",
+      "currency": "IQD",
+      "totalRooms": 120
+    },
+    {
+      "id": "h3",
+      "name": "Basra International",
+      "address": "Corniche St",
+      "city": "Basra",
+      "contact": "+964 770 000 3333",
+      "email": "reservations@basraint.com",
+      "currency": "IQD",
+      "totalRooms": 58
+    }
+  ],
+  "roomCategories": [
+    {
+      "id": "c1",
+      "hotelId": "h1",
+      "name": "Single Room",
+      "basePrice": 150000,
+      "capacity": 1,
+      "totalRooms": 12
+    },
+    {
+      "id": "c2",
+      "hotelId": "h1",
+      "name": "Double Room",
+      "basePrice": 250000,
+      "capacity": 2,
+      "totalRooms": 20
+    },
+    {
+      "id": "c3",
+      "hotelId": "h1",
+      "name": "Executive Suite",
+      "basePrice": 450000,
+      "capacity": 3,
+      "totalRooms": 8
+    },
+    {
+      "id": "c4",
+      "hotelId": "h2",
+      "name": "Standard Room",
+      "basePrice": 180000,
+      "capacity": 2,
+      "totalRooms": 60
+    },
+    {
+      "id": "c5",
+      "hotelId": "h2",
+      "name": "Deluxe Room",
+      "basePrice": 320000,
+      "capacity": 2,
+      "totalRooms": 40
+    },
+    {
+      "id": "c6",
+      "hotelId": "h2",
+      "name": "Presidential",
+      "basePrice": 850000,
+      "capacity": 4,
+      "totalRooms": 10
+    },
+    {
+      "id": "c7",
+      "hotelId": "h3",
+      "name": "Sea View Room",
+      "basePrice": 220000,
+      "capacity": 2,
+      "totalRooms": 30
+    },
+    {
+      "id": "c8",
+      "hotelId": "h3",
+      "name": "Luxury Suite",
+      "basePrice": 450000,
+      "capacity": 2,
+      "totalRooms": 15
+    },
+    {
+      "id": "id_1773081723179_zfnum",
+      "name": "BOX",
+      "basePrice": 10000,
+      "totalRooms": 2,
+      "capacity": 12,
+      "hotelId": "h2"
+    }
+  ],
+  "rooms": [
+    {
+      "id": "r1",
+      "hotelId": "h1",
+      "categoryId": "c1",
+      "number": "101",
+      "status": "Available"
+    },
+    {
+      "id": "r2",
+      "hotelId": "h1",
+      "categoryId": "c1",
+      "number": "102",
+      "status": "Occupied"
+    },
+    {
+      "id": "r3",
+      "hotelId": "h1",
+      "categoryId": "c1",
+      "number": "103",
+      "status": "Available"
+    },
+    {
+      "id": "r4",
+      "hotelId": "h1",
+      "categoryId": "c2",
+      "number": "201",
+      "status": "Available"
+    },
+    {
+      "id": "r5",
+      "hotelId": "h1",
+      "categoryId": "c2",
+      "number": "202",
+      "status": "Cleaning"
+    },
+    {
+      "id": "r6",
+      "hotelId": "h1",
+      "categoryId": "c3",
+      "number": "301",
+      "status": "Maintenance"
+    },
+    {
+      "id": "r7",
+      "hotelId": "h2",
+      "categoryId": "c4",
+      "number": "101",
+      "status": "Available"
+    },
+    {
+      "id": "r8",
+      "hotelId": "h2",
+      "categoryId": "c4",
+      "number": "102",
+      "status": "Occupied"
+    },
+    {
+      "id": "r9",
+      "hotelId": "h2",
+      "categoryId": "c5",
+      "number": "201",
+      "status": "Available"
+    },
+    {
+      "id": "r10",
+      "hotelId": "h2",
+      "categoryId": "c6",
+      "number": "P01",
+      "status": "Available"
+    },
+    {
+      "id": "r11",
+      "hotelId": "h3",
+      "categoryId": "c7",
+      "number": "101",
+      "status": "Occupied"
+    },
+    {
+      "id": "r12",
+      "hotelId": "h3",
+      "categoryId": "c8",
+      "number": "S01",
+      "status": "Available"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "BK-4592",
+      "hotelId": "h1",
+      "guestName": "Mohammed Jamil",
+      "checkIn": "2026-03-11",
+      "checkOut": "2026-03-13",
+      "status": "Confirmed",
+      "source": "Booking.com",
+      "totalAmount": 500000,
+      "roomNumber": "101"
+    },
+    {
+      "id": "BK-4593",
+      "hotelId": "h1",
+      "guestName": "Sara Ahmed",
+      "checkIn": "2026-03-13",
+      "checkOut": "2026-03-17",
+      "status": "Pending",
+      "source": "Direct",
+      "totalAmount": 1250000,
+      "roomNumber": "201"
+    },
+    {
+      "id": "BK-4594",
+      "hotelId": "h1",
+      "guestName": "Ali Basheer",
+      "checkIn": "2026-03-06",
+      "checkOut": "2026-03-09",
+      "status": "Checked In",
+      "source": "Expedia",
+      "totalAmount": 300000,
+      "roomNumber": "102"
+    },
+    {
+      "id": "BK-4595",
+      "hotelId": "h2",
+      "guestName": "Zaid Hussein",
+      "checkIn": "2026-03-09",
+      "checkOut": "2026-03-12",
+      "status": "Confirmed",
+      "source": "Agoda",
+      "totalAmount": 675000,
+      "roomNumber": "101"
+    },
+    {
+      "id": "BK-4596",
+      "hotelId": "h2",
+      "guestName": "Noor Khalid",
+      "checkIn": "2026-03-15",
+      "checkOut": "2026-03-18",
+      "status": "Confirmed",
+      "source": "Booking.com",
+      "totalAmount": 960000,
+      "roomNumber": "201"
+    },
+    {
+      "id": "BK-4597",
+      "hotelId": "h3",
+      "guestName": "Dania Hakim",
+      "checkIn": "2026-03-07",
+      "checkOut": "2026-03-10",
+      "status": "Checked In",
+      "source": "Direct",
+      "totalAmount": 660000,
+      "roomNumber": "101"
+    },
+    {
+      "id": "BK-4598",
+      "hotelId": "h1",
+      "guestName": "Khalil Rashid",
+      "checkIn": "2026-03-03",
+      "checkOut": "2026-03-05",
+      "status": "Completed",
+      "source": "Expedia",
+      "totalAmount": 500000,
+      "roomNumber": "103"
+    },
+    {
+      "id": "BK-4599",
+      "hotelId": "h2",
+      "guestName": "Wasim Al-Farsi",
+      "checkIn": "2026-03-22",
+      "checkOut": "2026-03-25",
+      "status": "Pending",
+      "source": "Direct",
+      "totalAmount": 850000,
+      "roomNumber": "P01"
+    },
+    {
+      "id": "BK-1773085363946",
+      "hotelId": "h1",
+      "guestName": "gahin",
+      "checkIn": "2026-03-09",
+      "checkOut": "2026-03-11",
+      "status": "Confirmed",
+      "source": "Public Web",
+      "totalAmount": 300000,
+      "roomNumber": "TBD"
+    },
+    {
+      "id": "BK-1773085483371",
+      "hotelId": "h2",
+      "guestName": "gahin",
+      "checkIn": "2026-03-09",
+      "checkOut": "2026-03-27",
+      "status": "Confirmed",
+      "source": "Public Web",
+      "totalAmount": 1700000,
+      "roomNumber": "TBD"
+    },
+    {
+      "id": "BK-1773087601993",
+      "hotelId": "h1",
+      "guestName": "fassss",
+      "checkIn": "2026-03-08",
+      "checkOut": "2026-03-09",
+      "status": "Confirmed",
+      "source": "Public Web",
+      "totalAmount": 250000,
+      "roomNumber": "TBD"
+    }
+  ],
+  "channels": [
+    {
+      "id": "ch1",
+      "hotelId": "h1",
+      "channelName": "Booking.com",
+      "isActive": true,
+      "bookings": 142,
+      "commission": "15%",
+      "lastSync": "2026-03-09T18:53:31.828Z"
+    },
+    {
+      "id": "ch2",
+      "hotelId": "h1",
+      "channelName": "Expedia",
+      "isActive": true,
+      "bookings": 84,
+      "commission": "18%",
+      "lastSync": "2026-03-09T18:53:31.828Z"
+    },
+    {
+      "id": "ch3",
+      "hotelId": "h1",
+      "channelName": "Agoda",
+      "isActive": false,
+      "bookings": 32,
+      "commission": "12%",
+      "lastSync": "2026-03-09T18:53:31.828Z"
+    },
+    {
+      "id": "ch4",
+      "hotelId": "h1",
+      "channelName": "Airbnb",
+      "isActive": true,
+      "bookings": 21,
+      "commission": "3%",
+      "lastSync": "2026-03-09T18:53:31.828Z"
+    },
+    {
+      "id": "ch5",
+      "hotelId": "h2",
+      "channelName": "Booking.com",
+      "isActive": true,
+      "bookings": 210,
+      "commission": "15%",
+      "lastSync": "2026-03-09T18:33:13.134Z"
+    },
+    {
+      "id": "ch6",
+      "hotelId": "h2",
+      "channelName": "Expedia",
+      "isActive": true,
+      "bookings": 98,
+      "commission": "18%",
+      "lastSync": "2026-03-09T18:18:13.134Z"
+    },
+    {
+      "id": "ch7",
+      "hotelId": "h3",
+      "channelName": "Booking.com",
+      "isActive": true,
+      "bookings": 76,
+      "commission": "15%",
+      "lastSync": "2026-03-09T18:30:13.134Z"
+    }
+  ],
+  "dailyInventory": [
+    {
+      "id": "inv-c1-2026-03-08",
+      "categoryId": "c1",
+      "date": "2026-03-08",
+      "price": 150000,
+      "available": 2
+    },
+    {
+      "id": "inv-c1-2026-03-09",
+      "categoryId": "c1",
+      "date": "2026-03-09",
+      "price": 172500,
+      "available": 4
+    },
+    {
+      "id": "inv-c1-2026-03-10",
+      "categoryId": "c1",
+      "date": "2026-03-10",
+      "price": 150000,
+      "available": 8
+    },
+    {
+      "id": "inv-c1-2026-03-11",
+      "categoryId": "c1",
+      "date": "2026-03-11",
+      "price": 150000,
+      "available": 3
+    },
+    {
+      "id": "inv-c1-2026-03-12",
+      "categoryId": "c1",
+      "date": "2026-03-12",
+      "price": 172500,
+      "available": 6
+    },
+    {
+      "id": "inv-c1-2026-03-13",
+      "categoryId": "c1",
+      "date": "2026-03-13",
+      "price": 150000,
+      "available": 6
+    },
+    {
+      "id": "inv-c1-2026-03-14",
+      "categoryId": "c1",
+      "date": "2026-03-14",
+      "price": 172500,
+      "available": 3
+    },
+    {
+      "id": "inv-c1-2026-03-15",
+      "categoryId": "c1",
+      "date": "2026-03-15",
+      "price": 172500,
+      "available": 8
+    },
+    {
+      "id": "inv-c1-2026-03-16",
+      "categoryId": "c1",
+      "date": "2026-03-16",
+      "price": 150000,
+      "available": 6
+    },
+    {
+      "id": "inv-c1-2026-03-17",
+      "categoryId": "c1",
+      "date": "2026-03-17",
+      "price": 150000,
+      "available": 9
+    },
+    {
+      "id": "inv-c1-2026-03-18",
+      "categoryId": "c1",
+      "date": "2026-03-18",
+      "price": 172500,
+      "available": 3
+    },
+    {
+      "id": "inv-c1-2026-03-19",
+      "categoryId": "c1",
+      "date": "2026-03-19",
+      "price": 172500,
+      "available": 6
+    },
+    {
+      "id": "inv-c1-2026-03-20",
+      "categoryId": "c1",
+      "date": "2026-03-20",
+      "price": 150000,
+      "available": 6
+    },
+    {
+      "id": "inv-c1-2026-03-21",
+      "categoryId": "c1",
+      "date": "2026-03-21",
+      "price": 150000,
+      "available": 9
+    },
+    {
+      "id": "inv-c2-2026-03-08",
+      "categoryId": "c2",
+      "date": "2026-03-08",
+      "price": 287500,
+      "available": 4
+    },
+    {
+      "id": "inv-c2-2026-03-09",
+      "categoryId": "c2",
+      "date": "2026-03-09",
+      "price": 250000,
+      "available": 7
+    },
+    {
+      "id": "inv-c2-2026-03-10",
+      "categoryId": "c2",
+      "date": "2026-03-10",
+      "price": 287500,
+      "available": 5
+    },
+    {
+      "id": "inv-c2-2026-03-11",
+      "categoryId": "c2",
+      "date": "2026-03-11",
+      "price": 250000,
+      "available": 2
+    },
+    {
+      "id": "inv-c2-2026-03-12",
+      "categoryId": "c2",
+      "date": "2026-03-12",
+      "price": 250000,
+      "available": 7
+    },
+    {
+      "id": "inv-c2-2026-03-13",
+      "categoryId": "c2",
+      "date": "2026-03-13",
+      "price": 250000,
+      "available": 5
+    },
+    {
+      "id": "inv-c2-2026-03-14",
+      "categoryId": "c2",
+      "date": "2026-03-14",
+      "price": 250000,
+      "available": 3
+    },
+    {
+      "id": "inv-c2-2026-03-15",
+      "categoryId": "c2",
+      "date": "2026-03-15",
+      "price": 250000,
+      "available": 12
+    },
+    {
+      "id": "inv-c2-2026-03-16",
+      "categoryId": "c2",
+      "date": "2026-03-16",
+      "price": 287500,
+      "available": 13
+    },
+    {
+      "id": "inv-c2-2026-03-17",
+      "categoryId": "c2",
+      "date": "2026-03-17",
+      "price": 250000,
+      "available": 9
+    },
+    {
+      "id": "inv-c2-2026-03-18",
+      "categoryId": "c2",
+      "date": "2026-03-18",
+      "price": 250000,
+      "available": 7
+    },
+    {
+      "id": "inv-c2-2026-03-19",
+      "categoryId": "c2",
+      "date": "2026-03-19",
+      "price": 250000,
+      "available": 6
+    },
+    {
+      "id": "inv-c2-2026-03-20",
+      "categoryId": "c2",
+      "date": "2026-03-20",
+      "price": 250000,
+      "available": 13
+    },
+    {
+      "id": "inv-c2-2026-03-21",
+      "categoryId": "c2",
+      "date": "2026-03-21",
+      "price": 250000,
+      "available": 7
+    },
+    {
+      "id": "inv-c3-2026-03-08",
+      "categoryId": "c3",
+      "date": "2026-03-08",
+      "price": 450000,
+      "available": 4
+    },
+    {
+      "id": "inv-c3-2026-03-09",
+      "categoryId": "c3",
+      "date": "2026-03-09",
+      "price": 450000,
+      "available": 4
+    },
+    {
+      "id": "inv-c3-2026-03-10",
+      "categoryId": "c3",
+      "date": "2026-03-10",
+      "price": 450000,
+      "available": 3
+    },
+    {
+      "id": "inv-c3-2026-03-11",
+      "categoryId": "c3",
+      "date": "2026-03-11",
+      "price": 517500,
+      "available": 6
+    },
+    {
+      "id": "inv-c3-2026-03-12",
+      "categoryId": "c3",
+      "date": "2026-03-12",
+      "price": 450000,
+      "available": 3
+    },
+    {
+      "id": "inv-c3-2026-03-13",
+      "categoryId": "c3",
+      "date": "2026-03-13",
+      "price": 450000,
+      "available": 5
+    },
+    {
+      "id": "inv-c3-2026-03-14",
+      "categoryId": "c3",
+      "date": "2026-03-14",
+      "price": 450000,
+      "available": 4
+    },
+    {
+      "id": "inv-c3-2026-03-15",
+      "categoryId": "c3",
+      "date": "2026-03-15",
+      "price": 450000,
+      "available": 2
+    },
+    {
+      "id": "inv-c3-2026-03-16",
+      "categoryId": "c3",
+      "date": "2026-03-16",
+      "price": 517500,
+      "available": 3
+    },
+    {
+      "id": "inv-c3-2026-03-17",
+      "categoryId": "c3",
+      "date": "2026-03-17",
+      "price": 450000,
+      "available": 6
+    },
+    {
+      "id": "inv-c3-2026-03-18",
+      "categoryId": "c3",
+      "date": "2026-03-18",
+      "price": 450000,
+      "available": 2
+    },
+    {
+      "id": "inv-c3-2026-03-19",
+      "categoryId": "c3",
+      "date": "2026-03-19",
+      "price": 450000,
+      "available": 5
+    },
+    {
+      "id": "inv-c3-2026-03-20",
+      "categoryId": "c3",
+      "date": "2026-03-20",
+      "price": 450000,
+      "available": 2
+    },
+    {
+      "id": "inv-c3-2026-03-21",
+      "categoryId": "c3",
+      "date": "2026-03-21",
+      "price": 450000,
+      "available": 4
+    },
+    {
+      "id": "inv-c4-2026-03-08",
+      "categoryId": "c4",
+      "date": "2026-03-08",
+      "price": 180000,
+      "available": 10
+    },
+    {
+      "id": "inv-c4-2026-03-09",
+      "categoryId": "c4",
+      "date": "2026-03-09",
+      "price": 180000,
+      "available": 36
+    },
+    {
+      "id": "inv-c4-2026-03-10",
+      "categoryId": "c4",
+      "date": "2026-03-10",
+      "price": 180000,
+      "available": 33
+    },
+    {
+      "id": "inv-c4-2026-03-11",
+      "categoryId": "c4",
+      "date": "2026-03-11",
+      "price": 180000,
+      "available": 9
+    },
+    {
+      "id": "inv-c4-2026-03-12",
+      "categoryId": "c4",
+      "date": "2026-03-12",
+      "price": 180000,
+      "available": 2
+    },
+    {
+      "id": "inv-c4-2026-03-13",
+      "categoryId": "c4",
+      "date": "2026-03-13",
+      "price": 180000,
+      "available": 35
+    },
+    {
+      "id": "inv-c4-2026-03-14",
+      "categoryId": "c4",
+      "date": "2026-03-14",
+      "price": 180000,
+      "available": 22
+    },
+    {
+      "id": "inv-c4-2026-03-15",
+      "categoryId": "c4",
+      "date": "2026-03-15",
+      "price": 207000,
+      "available": 10
+    },
+    {
+      "id": "inv-c4-2026-03-16",
+      "categoryId": "c4",
+      "date": "2026-03-16",
+      "price": 207000,
+      "available": 8
+    },
+    {
+      "id": "inv-c4-2026-03-17",
+      "categoryId": "c4",
+      "date": "2026-03-17",
+      "price": 207000,
+      "available": 28
+    },
+    {
+      "id": "inv-c4-2026-03-18",
+      "categoryId": "c4",
+      "date": "2026-03-18",
+      "price": 180000,
+      "available": 27
+    },
+    {
+      "id": "inv-c4-2026-03-19",
+      "categoryId": "c4",
+      "date": "2026-03-19",
+      "price": 207000,
+      "available": 26
+    },
+    {
+      "id": "inv-c4-2026-03-20",
+      "categoryId": "c4",
+      "date": "2026-03-20",
+      "price": 180000,
+      "available": 26
+    },
+    {
+      "id": "inv-c4-2026-03-21",
+      "categoryId": "c4",
+      "date": "2026-03-21",
+      "price": 180000,
+      "available": 20
+    },
+    {
+      "id": "inv-c5-2026-03-08",
+      "categoryId": "c5",
+      "date": "2026-03-08",
+      "price": 320000,
+      "available": 6
+    },
+    {
+      "id": "inv-c5-2026-03-09",
+      "categoryId": "c5",
+      "date": "2026-03-09",
+      "price": 368000,
+      "available": 21
+    },
+    {
+      "id": "inv-c5-2026-03-10",
+      "categoryId": "c5",
+      "date": "2026-03-10",
+      "price": 320000,
+      "available": 9
+    },
+    {
+      "id": "inv-c5-2026-03-11",
+      "categoryId": "c5",
+      "date": "2026-03-11",
+      "price": 320000,
+      "available": 16
+    },
+    {
+      "id": "inv-c5-2026-03-12",
+      "categoryId": "c5",
+      "date": "2026-03-12",
+      "price": 368000,
+      "available": 20
+    },
+    {
+      "id": "inv-c5-2026-03-13",
+      "categoryId": "c5",
+      "date": "2026-03-13",
+      "price": 320000,
+      "available": 22
+    },
+    {
+      "id": "inv-c5-2026-03-14",
+      "categoryId": "c5",
+      "date": "2026-03-14",
+      "price": 320000,
+      "available": 10
+    },
+    {
+      "id": "inv-c5-2026-03-15",
+      "categoryId": "c5",
+      "date": "2026-03-15",
+      "price": 368000,
+      "available": 12
+    },
+    {
+      "id": "inv-c5-2026-03-16",
+      "categoryId": "c5",
+      "date": "2026-03-16",
+      "price": 320000,
+      "available": 20
+    },
+    {
+      "id": "inv-c5-2026-03-17",
+      "categoryId": "c5",
+      "date": "2026-03-17",
+      "price": 368000,
+      "available": 25
+    },
+    {
+      "id": "inv-c5-2026-03-18",
+      "categoryId": "c5",
+      "date": "2026-03-18",
+      "price": 320000,
+      "available": 23
+    },
+    {
+      "id": "inv-c5-2026-03-19",
+      "categoryId": "c5",
+      "date": "2026-03-19",
+      "price": 368000,
+      "available": 8
+    },
+    {
+      "id": "inv-c5-2026-03-20",
+      "categoryId": "c5",
+      "date": "2026-03-20",
+      "price": 320000,
+      "available": 15
+    },
+    {
+      "id": "inv-c5-2026-03-21",
+      "categoryId": "c5",
+      "date": "2026-03-21",
+      "price": 368000,
+      "available": 20
+    },
+    {
+      "id": "inv-c6-2026-03-08",
+      "categoryId": "c6",
+      "date": "2026-03-08",
+      "price": 850000,
+      "available": 5
+    },
+    {
+      "id": "inv-c6-2026-03-09",
+      "categoryId": "c6",
+      "date": "2026-03-09",
+      "price": 850000,
+      "available": 5
+    },
+    {
+      "id": "inv-c6-2026-03-10",
+      "categoryId": "c6",
+      "date": "2026-03-10",
+      "price": 850000,
+      "available": 4
+    },
+    {
+      "id": "inv-c6-2026-03-11",
+      "categoryId": "c6",
+      "date": "2026-03-11",
+      "price": 977500,
+      "available": 5
+    },
+    {
+      "id": "inv-c6-2026-03-12",
+      "categoryId": "c6",
+      "date": "2026-03-12",
+      "price": 850000,
+      "available": 2
+    },
+    {
+      "id": "inv-c6-2026-03-13",
+      "categoryId": "c6",
+      "date": "2026-03-13",
+      "price": 850000,
+      "available": 5
+    },
+    {
+      "id": "inv-c6-2026-03-14",
+      "categoryId": "c6",
+      "date": "2026-03-14",
+      "price": 850000,
+      "available": 6
+    },
+    {
+      "id": "inv-c6-2026-03-15",
+      "categoryId": "c6",
+      "date": "2026-03-15",
+      "price": 977500,
+      "available": 2
+    },
+    {
+      "id": "inv-c6-2026-03-16",
+      "categoryId": "c6",
+      "date": "2026-03-16",
+      "price": 850000,
+      "available": 6
+    },
+    {
+      "id": "inv-c6-2026-03-17",
+      "categoryId": "c6",
+      "date": "2026-03-17",
+      "price": 850000,
+      "available": 6
+    },
+    {
+      "id": "inv-c6-2026-03-18",
+      "categoryId": "c6",
+      "date": "2026-03-18",
+      "price": 850000,
+      "available": 4
+    },
+    {
+      "id": "inv-c6-2026-03-19",
+      "categoryId": "c6",
+      "date": "2026-03-19",
+      "price": 850000,
+      "available": 6
+    },
+    {
+      "id": "inv-c6-2026-03-20",
+      "categoryId": "c6",
+      "date": "2026-03-20",
+      "price": 850000,
+      "available": 6
+    },
+    {
+      "id": "inv-c6-2026-03-21",
+      "categoryId": "c6",
+      "date": "2026-03-21",
+      "price": 850000,
+      "available": 5
+    },
+    {
+      "id": "inv-c7-2026-03-08",
+      "categoryId": "c7",
+      "date": "2026-03-08",
+      "price": 220000,
+      "available": 11
+    },
+    {
+      "id": "inv-c7-2026-03-09",
+      "categoryId": "c7",
+      "date": "2026-03-09",
+      "price": 253000,
+      "available": 12
+    },
+    {
+      "id": "inv-c7-2026-03-10",
+      "categoryId": "c7",
+      "date": "2026-03-10",
+      "price": 253000,
+      "available": 10
+    },
+    {
+      "id": "inv-c7-2026-03-11",
+      "categoryId": "c7",
+      "date": "2026-03-11",
+      "price": 220000,
+      "available": 10
+    },
+    {
+      "id": "inv-c7-2026-03-12",
+      "categoryId": "c7",
+      "date": "2026-03-12",
+      "price": 220000,
+      "available": 19
+    },
+    {
+      "id": "inv-c7-2026-03-13",
+      "categoryId": "c7",
+      "date": "2026-03-13",
+      "price": 253000,
+      "available": 10
+    },
+    {
+      "id": "inv-c7-2026-03-14",
+      "categoryId": "c7",
+      "date": "2026-03-14",
+      "price": 220000,
+      "available": 4
+    },
+    {
+      "id": "inv-c7-2026-03-15",
+      "categoryId": "c7",
+      "date": "2026-03-15",
+      "price": 220000,
+      "available": 4
+    },
+    {
+      "id": "inv-c7-2026-03-16",
+      "categoryId": "c7",
+      "date": "2026-03-16",
+      "price": 220000,
+      "available": 19
+    },
+    {
+      "id": "inv-c7-2026-03-17",
+      "categoryId": "c7",
+      "date": "2026-03-17",
+      "price": 253000,
+      "available": 17
+    },
+    {
+      "id": "inv-c7-2026-03-18",
+      "categoryId": "c7",
+      "date": "2026-03-18",
+      "price": 253000,
+      "available": 12
+    },
+    {
+      "id": "inv-c7-2026-03-19",
+      "categoryId": "c7",
+      "date": "2026-03-19",
+      "price": 253000,
+      "available": 5
+    },
+    {
+      "id": "inv-c7-2026-03-20",
+      "categoryId": "c7",
+      "date": "2026-03-20",
+      "price": 253000,
+      "available": 3
+    },
+    {
+      "id": "inv-c7-2026-03-21",
+      "categoryId": "c7",
+      "date": "2026-03-21",
+      "price": 220000,
+      "available": 7
+    },
+    {
+      "id": "inv-c8-2026-03-08",
+      "categoryId": "c8",
+      "date": "2026-03-08",
+      "price": 450000,
+      "available": 7
+    },
+    {
+      "id": "inv-c8-2026-03-09",
+      "categoryId": "c8",
+      "date": "2026-03-09",
+      "price": 450000,
+      "available": 4
+    },
+    {
+      "id": "inv-c8-2026-03-10",
+      "categoryId": "c8",
+      "date": "2026-03-10",
+      "price": 450000,
+      "available": 7
+    },
+    {
+      "id": "inv-c8-2026-03-11",
+      "categoryId": "c8",
+      "date": "2026-03-11",
+      "price": 517500,
+      "available": 2
+    },
+    {
+      "id": "inv-c8-2026-03-12",
+      "categoryId": "c8",
+      "date": "2026-03-12",
+      "price": 450000,
+      "available": 5
+    },
+    {
+      "id": "inv-c8-2026-03-13",
+      "categoryId": "c8",
+      "date": "2026-03-13",
+      "price": 517500,
+      "available": 3
+    },
+    {
+      "id": "inv-c8-2026-03-14",
+      "categoryId": "c8",
+      "date": "2026-03-14",
+      "price": 450000,
+      "available": 6
+    },
+    {
+      "id": "inv-c8-2026-03-15",
+      "categoryId": "c8",
+      "date": "2026-03-15",
+      "price": 450000,
+      "available": 10
+    },
+    {
+      "id": "inv-c8-2026-03-16",
+      "categoryId": "c8",
+      "date": "2026-03-16",
+      "price": 450000,
+      "available": 2
+    },
+    {
+      "id": "inv-c8-2026-03-17",
+      "categoryId": "c8",
+      "date": "2026-03-17",
+      "price": 517500,
+      "available": 2
+    },
+    {
+      "id": "inv-c8-2026-03-18",
+      "categoryId": "c8",
+      "date": "2026-03-18",
+      "price": 517500,
+      "available": 2
+    },
+    {
+      "id": "inv-c8-2026-03-19",
+      "categoryId": "c8",
+      "date": "2026-03-19",
+      "price": 450000,
+      "available": 9
+    },
+    {
+      "id": "inv-c8-2026-03-20",
+      "categoryId": "c8",
+      "date": "2026-03-20",
+      "price": 450000,
+      "available": 5
+    },
+    {
+      "id": "inv-c8-2026-03-21",
+      "categoryId": "c8",
+      "date": "2026-03-21",
+      "price": 517500,
+      "available": 7
+    },
+    {
+      "id": "inv-id_1773081723179_zfnum-2026-03-08",
+      "categoryId": "id_1773081723179_zfnum",
+      "date": "2026-03-08",
+      "price": 10000,
+      "available": 2
+    },
+    {
+      "id": "inv-id_1773081723179_zfnum-2026-03-09",
+      "categoryId": "id_1773081723179_zfnum",
+      "date": "2026-03-09",
+      "price": 10000,
+      "available": 2
+    },
+    {
+      "id": "inv-id_1773081723179_zfnum-2026-03-10",
+      "categoryId": "id_1773081723179_zfnum",
+      "date": "2026-03-10",
+      "price": 10000,
+      "available": 2
+    },
+    {
+      "id": "inv-id_1773081723179_zfnum-2026-03-11",
+      "categoryId": "id_1773081723179_zfnum",
+      "date": "2026-03-11",
+      "price": 10000,
+      "available": 2
+    },
+    {
+      "id": "inv-id_1773081723179_zfnum-2026-03-12",
+      "categoryId": "id_1773081723179_zfnum",
+      "date": "2026-03-12",
+      "price": 10000,
+      "available": 2
+    },
+    {
+      "id": "inv-id_1773081723179_zfnum-2026-03-13",
+      "categoryId": "id_1773081723179_zfnum",
+      "date": "2026-03-13",
+      "price": 10000,
+      "available": 2
+    },
+    {
+      "id": "inv-id_1773081723179_zfnum-2026-03-14",
+      "categoryId": "id_1773081723179_zfnum",
+      "date": "2026-03-14",
+      "price": 10000,
+      "available": 2
+    },
+    {
+      "id": "inv-id_1773081723179_zfnum-2026-03-15",
+      "categoryId": "id_1773081723179_zfnum",
+      "date": "2026-03-15",
+      "price": 10000,
+      "available": 2
+    },
+    {
+      "id": "inv-id_1773081723179_zfnum-2026-03-16",
+      "categoryId": "id_1773081723179_zfnum",
+      "date": "2026-03-16",
+      "price": 10000,
+      "available": 2
+    },
+    {
+      "id": "inv-id_1773081723179_zfnum-2026-03-17",
+      "categoryId": "id_1773081723179_zfnum",
+      "date": "2026-03-17",
+      "price": 10000,
+      "available": 2
+    },
+    {
+      "id": "inv-id_1773081723179_zfnum-2026-03-18",
+      "categoryId": "id_1773081723179_zfnum",
+      "date": "2026-03-18",
+      "price": 10000,
+      "available": 2
+    },
+    {
+      "id": "inv-id_1773081723179_zfnum-2026-03-19",
+      "categoryId": "id_1773081723179_zfnum",
+      "date": "2026-03-19",
+      "price": 10000,
+      "available": 2
+    },
+    {
+      "id": "inv-id_1773081723179_zfnum-2026-03-20",
+      "categoryId": "id_1773081723179_zfnum",
+      "date": "2026-03-20",
+      "price": 10000,
+      "available": 2
+    },
+    {
+      "id": "inv-id_1773081723179_zfnum-2026-03-21",
+      "categoryId": "id_1773081723179_zfnum",
+      "date": "2026-03-21",
+      "price": 10000,
+      "available": 2
+    }
+  ],
+  "users": [
+    {
+      "id": "u_admin",
+      "name": "Admin User",
+      "email": "admin@gate2hotels.com",
+      "password": "admin123",
+      "role": "admin",
+      "hotelId": null
+    }
+  ]
+}

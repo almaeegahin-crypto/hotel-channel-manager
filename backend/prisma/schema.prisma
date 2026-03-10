@@ -3,10 +3,105 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
 }
 
-model Test {
-  id String @id @default(uuid())
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String
+  name      String
+  role      String   @default("STAFF") // ADMIN, MANAGER, STAFF
+  hotelId   String?
+  hotel     Hotel?   @relation(fields: [hotelId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Hotel {
+  id          String         @id @default(uuid())
+  name        String
+  address     String
+  city        String
+  contact     String
+  email       String
+  currency    String         @default("IQD")
+  rooms       Room[]
+  categories  RoomCategory[]
+  bookings    Booking[]
+  channels    ChannelConfig[]
+  users       User[]
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+}
+
+model RoomCategory {
+  id          String   @id @default(uuid())
+  hotelId     String
+  hotel       Hotel    @relation(fields: [hotelId], references: [id])
+  name        String
+  basePrice   Float
+  capacity    Int
+  rooms       Room[]
+  inventory   DailyInventory[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model DailyInventory {
+  id          String       @id @default(uuid())
+  date        DateTime
+  categoryId  String
+  category    RoomCategory @relation(fields: [categoryId], references: [id])
+  price       Float
+  available   Int
+  lastSync    DateTime?
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+
+  @@unique([date, categoryId])
+}
+
+model Room {
+  id          String       @id @default(uuid())
+  hotelId     String
+  hotel       Hotel        @relation(fields: [hotelId], references: [id])
+  categoryId  String
+  category    RoomCategory @relation(fields: [categoryId], references: [id])
+  roomNumber  String
+  status      String       @default("AVAILABLE") // AVAILABLE, OCCUPIED, MAINTENANCE, DIRTY
+  bookings    Booking[]
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+}
+
+model Booking {
+  id          String        @id @default(uuid())
+  hotelId     String
+  hotel       Hotel         @relation(fields: [hotelId], references: [id])
+  roomId      String
+  room        Room          @relation(fields: [roomId], references: [id])
+  guestName   String
+  guestEmail  String?
+  checkIn     DateTime
+  checkOut    DateTime
+  totalAmount Float
+  status      String        @default("PENDING") // PENDING, CONFIRMED, CANCELLED, etc.
+  source      String        @default("DIRECT") // e.g., "BOOKING.COM", "EXPEDIA"
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+}
+
+model ChannelConfig {
+  id          String   @id @default(uuid())
+  hotelId     String
+  hotel       Hotel    @relation(fields: [hotelId], references: [id])
+  channelName String   // e.g., "BOOKING.COM"
+  apiKey      String?
+  isActive    Boolean  @default(true)
+  lastSync    DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
 }
